@@ -1,4 +1,4 @@
-# Project Name: Laravel 10 Exam System
+# Laravel 10 Exam System
 
 ### Project Overview:
 The Laravel 10 Exam System is a web-based application designed to manage and conduct exams. It includes features such as user authentication, exam creation, exam scheduling, exam-taking, and result management. The system provides a seamless experience for both exam administrators and exam takers.
