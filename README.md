@@ -1,4 +1,35 @@
-# Exam-System with Laravel 10 project
+# Project Name: Laravel 10 Exam System
+
+#### Project Overview:
+The Laravel 10 Exam System is a web-based application designed to manage and conduct exams. It includes features such as user authentication, exam creation, exam scheduling, exam-taking, and result management. The system provides a seamless experience for both exam administrators and exam takers.
+
+#### Key Features:
+1. User Authentication and Authorization:
+   - User registration and login with appropriate access levels (e.g., admin, teacher, student).
+
+2. Exam Creation and Management:
+   - Create exams with multiple-choice questions, essay questions, etc.
+   - Set time limits, exam instructions, and passing criteria.
+
+3. Exam Scheduling:
+   - Schedule exams for specific dates and times.
+   - Assign exams to classes or groups.
+
+4. Exam Taking:
+   - Allow students to take exams online within the scheduled time.
+   - Restrict access to the exam before and after the scheduled time.
+
+5. Result Management:
+   - Automatically grade multiple-choice questions.
+   - Provide manual grading for essay questions.
+   - Generate exam reports and provide feedback to students.
+
+
+#### Setup and Usage:
+1. Clone the repository:
+   ```
+   git clone https://github.com/ikramulhasan1/Exam-System.git
+   ```
 
 ## users continue here:
 
