@@ -11,8 +11,9 @@ class QuestionBankController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        //
+    {   
+        $questions = QuestionBank::all();
+        return view('backend.questionbank.index', compact('questions'));
     }
 
     /**

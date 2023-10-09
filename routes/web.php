@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\QuestionBankController;
 use App\Http\Controllers\SubjectController;
 
 
@@ -23,7 +24,8 @@ Route::middleware('auth')->group(function () {
 // Route::resource('subjects', SubjectController::class);
 Route::resources([
     'subjects' => SubjectController::class,
-    'levels' => LevelController::class
+    'levels' => LevelController::class,
+    'questionbanks' => QuestionBankController::class
 ]);
 
 require __DIR__ . '/auth.php';
