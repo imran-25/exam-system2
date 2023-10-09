@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LevelController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SubjectController;
 
@@ -19,6 +20,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('subjects', SubjectController::class);
+// Route::resource('subjects', SubjectController::class);
+Route::resources([
+    'subjects' => SubjectController::class,
+    'levels' => LevelController::class
+]);
 
 require __DIR__ . '/auth.php';

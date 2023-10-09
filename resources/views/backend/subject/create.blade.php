@@ -12,17 +12,26 @@
                     @csrf
                     <div class="mb-3">
 
-                        <input type="email" name="name" class="form-control" id="exampleInputEmail1"
+                        <input type="text" name="name" class="form-control" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="mb-3 d-flex flex-column">
+                        <label class="form-label">Level</label>
+
+                        <select class="form-select p-2 border ">
+                            <option selected>select menu</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
 
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Image</label>
                         <div class="col-lg-12">
-
                             <input type="file" name="image" class="custom-file-input" id="customFile">
                             <label class="custom-file-label" for="customFile">Choose file</label>
-
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>

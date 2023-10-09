@@ -72,10 +72,11 @@
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Subject Details</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Form components">
-                        <li class="nav-item"><a href="{{ route('subjects.index') }}" class="nav-link">Subject</a>
+                        <li class="nav-item"><a href="{{ route('subjects.index') }}" class="nav-link">Subject list</a>
                         </li>
 
-                        <li class="nav-item"><a href="{{ route('subjects.create') }}" class="nav-link">Add Subject</a>
+                        <li class="nav-item"><a href="{{ route('subjects.create') }}" class="nav-link">Subject
+                                create</a> 
                         </li>
 
                     </ul>
@@ -83,10 +84,10 @@
                 <li class="nav-item nav-item-submenu">
                     <a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Level Details</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Form components">
-                        <li class="nav-item"><a href="{{ route('subjects.index') }}" class="nav-link">Level</a>
+                        <li class="nav-item"><a href="{{ route('levels.index') }}" class="nav-link">Level list</a>
                         </li>
 
-                        <li class="nav-item"><a href="{{ route('subjects.create') }}" class="nav-link">Add Level</a>
+                        <li class="nav-item"><a href="{{ route('levels.create') }}" class="nav-link">Level create</a>
                         </li>
 
                     </ul>

@@ -12,7 +12,8 @@ class LevelController extends Controller
      */
     public function index()
     {
-        //
+        $levels = Level::all();
+        return view('backend.level.index', compact('levels'));
     }
 
     /**
@@ -20,7 +21,7 @@ class LevelController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.level.create');
     }
 
     /**
@@ -28,7 +29,8 @@ class LevelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Level::create($request->all());
+        return redirect()->route('levels.index')->withSuccess('Level added successfully');
     }
 
     /**
@@ -44,7 +46,7 @@ class LevelController extends Controller
      */
     public function edit(Level $level)
     {
-        //
+        return view('backend.Level.edit', compact('level'));
     }
 
     /**
@@ -52,7 +54,8 @@ class LevelController extends Controller
      */
     public function update(Request $request, Level $level)
     {
-        //
+        $level->update($request->all());
+        return redirect()->route('levels.index')->withSuccess('Level updated successfully');
     }
 
     /**
@@ -60,6 +63,7 @@ class LevelController extends Controller
      */
     public function destroy(Level $level)
     {
-        //
+        $level->delete();
+        return redirect()->route('levels.index')->withSuccess('Levels deleted successfully');
     }
 }

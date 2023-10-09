@@ -13,7 +13,7 @@ class SubjectController extends Controller
     public function index()
     {
         $subjects = Subject::all();
-        return view('backend.subject.subject', compact('subjects'));
+        return view('backend.subject.index', compact('subjects'));
     }
 
     /**
@@ -21,7 +21,7 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        return view('backend.subject.subject-add');
+        return view('backend.subject.create');
     }
 
     /**
@@ -47,7 +47,7 @@ class SubjectController extends Controller
      */
     public function edit(Subject $subject)
     {
-        return view('backend.subject.subject-edit', compact('subject'));
+        return view('backend.subject.edit', compact('subject'));
     }
 
     /**
