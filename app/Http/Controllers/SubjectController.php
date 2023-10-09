@@ -12,7 +12,8 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        //
+        $subjects = Subject::all();
+        return view('backend.subject.subject', compact('subjects'));
     }
 
     /**
@@ -20,7 +21,7 @@ class SubjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.subject.subject-add');
     }
 
     /**
@@ -28,7 +29,9 @@ class SubjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Subject::create($request->all());
+        return redirect()->route('subjects.index')->withSuccess('Subject added successfully');
+     
     }
 
     /**
@@ -44,7 +47,7 @@ class SubjectController extends Controller
      */
     public function edit(Subject $subject)
     {
-        //
+        return view('backend.subject.subject-edit', compact('subject'));
     }
 
     /**
