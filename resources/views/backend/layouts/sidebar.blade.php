@@ -70,7 +70,7 @@
                         title="Forms"></i>
                 </li>
                 <li class="nav-item nav-item-submenu">
-                    <a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Exam Details</span></a>
+                    <a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Subject Details</span></a>
                     <ul class="nav nav-group-sub" data-submenu-title="Form components">
                         <li class="nav-item"><a href="{{ route('subjects.index') }}" class="nav-link">Subject</a>
                         </li>
@@ -78,8 +78,16 @@
                         <li class="nav-item"><a href="{{ route('subjects.create') }}" class="nav-link">Add Subject</a>
                         </li>
 
-                        <li class="nav-item"><a href="form_multiselect.html" class="nav-link">Bootstrap
-                                multiselect</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Level Details</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Form components">
+                        <li class="nav-item"><a href="{{ route('subjects.index') }}" class="nav-link">Level</a>
+                        </li>
+
+                        <li class="nav-item"><a href="{{ route('subjects.create') }}" class="nav-link">Add Level</a>
+                        </li>
 
                     </ul>
                 </li>

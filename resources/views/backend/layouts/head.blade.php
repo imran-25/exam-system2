@@ -39,3 +39,8 @@
 <script src="{{ asset('ui/backend/global_assets') }}/js/demo_charts/pages/dashboard/light/pies.js"></script>
 <script src="{{ asset('ui/backend/global_assets') }}/js/demo_charts/pages/dashboard/light/bullets.js"></script>
 <!-- /theme JS files -->
+
+{{-- Bootstrap --}}
+
+{{-- Bootstrap icon cdn --}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">

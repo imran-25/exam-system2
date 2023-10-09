@@ -55,7 +55,8 @@ class SubjectController extends Controller
      */
     public function update(Request $request, Subject $subject)
     {
-        //
+        $subject->update($request->all());
+        return redirect()->route('subjects.index')->withSuccess('Subject updated successfully');
     }
 
     /**
@@ -63,6 +64,7 @@ class SubjectController extends Controller
      */
     public function destroy(Subject $subject)
     {
-        //
+        $subject->delete();
+        return redirect()->route('subjects.index')->withSuccess('Subject deleted successfully');
     }
 }
