@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Level;
 use App\Models\QuestionBank;
+use App\Models\Subject;
 use Illuminate\Http\Request;
 
 class QuestionBankController extends Controller
@@ -21,7 +23,9 @@ class QuestionBankController extends Controller
      */
     public function create()
     {
-        //
+        $subjects = Subject::all();
+        $levels = Level::all();
+        return view('backend.questionbank.create', compact('subjects', 'levels'));
     }
 
     /**
@@ -29,7 +33,11 @@ class QuestionBankController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        QuestionBank::create($data);
+
+        return  redirect()->route('questionbanks.index');
+
     }
 
     /**

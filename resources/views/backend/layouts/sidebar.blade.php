@@ -93,6 +93,41 @@
                     </ul>
                 </li>
 
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Question Bank</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Form components">
+                        <li class="nav-item"><a href="{{ route('questionbanks.index') }}" class="nav-link">QuestionBank list</a>
+                        </li>
+
+                        <li class="nav-item"><a href="{{ route('questionbanks.create') }}" class="nav-link">QuestionBank create</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Question Paper</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Form components">
+                        <li class="nav-item"><a href="{{ route('questionpapers.index') }}" class="nav-link">QuestionPaper list</a>
+                        </li>
+
+                        <li class="nav-item"><a href="{{ route('questionpapers.create') }}" class="nav-link">QuestionPaper create</a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-pencil3"></i> <span>Exams</span></a>
+                    <ul class="nav nav-group-sub" data-submenu-title="Form components">
+                        <li class="nav-item"><a href="{{ route('exams.index') }}" class="nav-link">Exam list</a>
+                        </li>
+
+                        <li class="nav-item"><a href="{{ route('questionbanks.create') }}" class="nav-link">Exam create</a>
+                        </li>
+
+                    </ul>
+                </li>
+
 
 
                 <!-- /forms -->

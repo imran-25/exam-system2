@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\ExamController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuestionBankController;
+use App\Http\Controllers\QuestionPaperController;
 use App\Http\Controllers\SubjectController;
 
 
@@ -25,7 +27,9 @@ Route::middleware('auth')->group(function () {
 Route::resources([
     'subjects' => SubjectController::class,
     'levels' => LevelController::class,
-    'questionbanks' => QuestionBankController::class
+    'questionbanks' => QuestionBankController::class,
+    'exams' => ExamController::class,
+    'questionpapers' => QuestionPaperController::class
 ]);
 
 require __DIR__ . '/auth.php';
