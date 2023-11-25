@@ -36,14 +36,14 @@ class ExamController extends Controller
             // end of exam create
 
 
-            // make question paper of this exam 
+            // make question paper of this exam
            $questions =  QuestionBank::where('subject_id', $request->subject_id)
                                      ->where('level_id', $request->level_id)
                                      ->inRandomOrder()
                                      ->take($request->total_questions)
                                      ->get();
-            
-           
+
+
             if(count($questions) > 0){
                 foreach($questions as $question){
                     QuestionPaper::create([
@@ -70,20 +70,22 @@ class ExamController extends Controller
        }
     }
 
-    public function edit()
+    public function edit($id)
     {
-
+        $exam = Exam::findOrFail($id);
+        $subject = Subject::findOrFail($id);
+        return view('backend.exams.edit', compact('exam','subject'));
     }
 
     public function update()
     {
-        
+
     }
 
     public function destroy($id)
     {
         Exam::destroy($id);
         return redirect()->route('exams.index');
-        
+
     }
 }

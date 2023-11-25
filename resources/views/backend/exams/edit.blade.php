@@ -4,30 +4,53 @@
     <div class="container my-5">
         <div class="card">
             <div class="card-header d-flex justify-content-between align-items-end">
-                <div class="card-title">Subjects</div>
-                <a href="{{ route('subjects.index') }}" class="btn btn-primary">Subject</a>
+                <a href="{{ route('subjects.index') }}" class="btn btn-primary">Exam List</a>
+
             </div>
             <div class="card-body">
-                <form action="{{ route('subjects.update', $subject->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('exams.update', $exam->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
+
+                    <div class="mb-3">
+                        <label>Subject</label>
+                        <select class="form-control" name="subject_id">
+
+                                <option value="{{ $subject->id }}">{{ $subject->name ?? '' }}</option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label>Level</label>
+                        <select class="form-control" name="level_id">
+                           @isset($levels)
+                               @foreach ($levels as $level)
+                                <option value="{{ $level->id }}">{{ $level->name ?? ''}}</option>
+                               @endforeach
+                           @endisset
+                        </select>
+                    </div>
+
                     <div class="mb-3">
 
-                        <input type="text" name="name" value="{{ $subject->name }}" class="form-control"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <input type="text" name="name" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Exam Name">
 
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Image</label>
-                        <div class="col-lg-12">
 
-                            <input type="file" name="image" value="{{ $subject->image }}" class="custom-file-input"
-                                id="customFile">
-                            <label class="custom-file-label" for="customFile">Choose file</label>
 
-                        </div>
+
+
+                    <div class="mt-3">
+                        <input type="number" name="duration" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Exam Duration">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+
+                    <div class="mt-3">
+                        <input type="number" name="total_questions" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="Total Questions">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
                 </form>
             </div>
         </div>
